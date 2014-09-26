@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D575EEE9-D896-43F9-9D46-332B470DF1B5}</ProjectGuid>
+    <ProjectGuid>{8B0BC463-95CF-482A-B9D9-C138751F72C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>UnitTestProject1</RootNamespace>
     <AssemblyName>UnitTestProject1</AssemblyName>
@@ -16,6 +16,10 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,9 +121,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication1\ConsoleApplication1.csproj">
-      <Project>{77bf4f75-bd78-4c58-9b52-896c782e5773}</Project>
-      <Name>ConsoleApplication1</Name>
+    <ProjectReference Include="..\P-I-1\P-I-1.vbproj">
+      <Project>{f1ff0cf6-e735-4584-973c-7f362cc15cfc}</Project>
+      <Name>P-I-1</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

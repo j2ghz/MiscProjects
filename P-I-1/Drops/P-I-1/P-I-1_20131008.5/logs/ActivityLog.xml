@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="ActivityLog.xsl"?>
+<BuildInformation>
+  <BuildInformationNode Id="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="1" />
+    <InformationField Name="ActivityType" Value="DynamicActivity" />
+    <InformationField Name="DisplayName" Value="Overall Build Process" />
+    <InformationField Name="Duration" Value="00:02:19" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:07.4978975Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:48:27.4745473Z" />
+  </Fields>
+<Children><BuildInformationNode Id="8df57a95-8716-4173-b3c1-6a3c0c6db367" ParentId="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="3" />
+    <InformationField Name="ActivityType" Value="GetBuildDetail" />
+    <InformationField Name="DisplayName" Value="Get the Build" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:07.7458982Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:07.7458982Z" />
+  </Fields>
+<Children /></BuildInformationNode><BuildInformationNode Id="2f0247f7-9bdd-4e01-a37b-22eec467c61c" ParentId="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="4" />
+    <InformationField Name="ActivityType" Value="Sequence" />
+    <InformationField Name="DisplayName" Value="Update Drop Location" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:07.7538978Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:08.3489874Z" />
+  </Fields>
+<Children><BuildInformationNode Id="a25182cc-06f9-4f0a-8479-3c9a3dfc3012" ParentId="2f0247f7-9bdd-4e01-a37b-22eec467c61c" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="11" />
+    <InformationField Name="ActivityType" Value="UpdateBuildNumber" />
+    <InformationField Name="DisplayName" Value="Update Build Number" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:07.8369157Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:08.1242045Z" />
+  </Fields>
+<Children><BuildInformationNode Id="0e0f2efd-566d-4619-8862-b9c974b77508" ParentId="a25182cc-06f9-4f0a-8479-3c9a3dfc3012" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="BuildNumberFormat" Value="$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)" />
+  </Fields>
+<Children /></BuildInformationNode><BuildInformationNode Id="9fb87109-0d7b-4efd-bd22-19fd83aef93e" ParentId="a25182cc-06f9-4f0a-8479-3c9a3dfc3012" Type="ActivityOutput">
+  <Fields>
+    <InformationField Name="Result" Value="P-I-1_20131008.5" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode><BuildInformationNode Id="ece49a55-fd14-48d4-bca5-fb49fadee593" ParentId="2f0247f7-9bdd-4e01-a37b-22eec467c61c" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="12" />
+    <InformationField Name="ActivityType" Value="If" />
+    <InformationField Name="DisplayName" Value="If Build Reason is Triggered" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:08.1292032Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:08.3469868Z" />
+  </Fields>
+<Children><BuildInformationNode Id="921f5945-6af0-4f3f-8616-25eef6f22699" ParentId="ece49a55-fd14-48d4-bca5-fb49fadee593" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="15" />
+    <InformationField Name="ActivityType" Value="SetBuildProperties" />
+    <InformationField Name="DisplayName" Value="Set Drop Location" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:08.2815615Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:08.3459866Z" />
+  </Fields>
+<Children><BuildInformationNode Id="c27e9af1-69c2-4a40-a799-ac93867060c3" ParentId="921f5945-6af0-4f3f-8616-25eef6f22699" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="LabelName" />
+    <InformationField Name="SourceGetVersion" />
+    <InformationField Name="KeepForever" Value="False" />
+    <InformationField Name="DropLocation" Value="$/P-I-1/Drops/P-I-1/P-I-1_20131008.5" />
+    <InformationField Name="Status" Value="None" />
+    <InformationField Name="LogLocation" />
+    <InformationField Name="BuildNumber" />
+    <InformationField Name="Quality" />
+    <InformationField Name="TestStatus" Value="Unknown" />
+    <InformationField Name="CompilationStatus" Value="Unknown" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode><BuildInformationNode Id="95e75cdb-355b-4777-b515-0a5627cbded1" ParentId="ece49a55-fd14-48d4-bca5-fb49fadee593" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="Condition" Value="True" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode><BuildInformationNode Id="29f04ad4-43f5-482f-92ba-4cb7b76250b0" ParentId="2f0247f7-9bdd-4e01-a37b-22eec467c61c" Type="ActivityTracking">
+  <Fields>
+    <InformationField Name="ActivityInstanceId" Value="16" />
+    <InformationField Name="ActivityType" Value="If" />
+    <InformationField Name="DisplayName" Value="If Build Reason is ValidateShelveset" />
+    <InformationField Name="Duration" Value="00:00:00" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:08.3489874Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:46:08.3489874Z" />
+  </Fields>
+<Children><BuildInformationNode Id="e17a0d6a-6918-4a5c-ab8c-d2a5a7ca5918" ParentId="29f04ad4-43f5-482f-92ba-4cb7b76250b0" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="Condition" Value="False" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode></Children></BuildInformationNode><BuildInformationNode Id="43f24c28-027a-4e3d-84fb-d4fe457e45d1" ParentId="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="AgentScopeActivityTracking">
+  <Fields>
+    <InformationField Name="ReservationStatus" Value="AgentReleased" />
+    <InformationField Name="ReservedAgentUri" Value="vstfs:///Build/Agent/64" />
+    <InformationField Name="ReservedAgentName" Value="Hosted Build Agent" />
+    <InformationField Name="ActivityInstanceId" Value="17" />
+    <InformationField Name="ActivityType" Value="AgentScope" />
+    <InformationField Name="DisplayName" Value="Run On Agent" />
+    <InformationField Name="Duration" Value="00:02:18" />
+    <InformationField Name="State" Value="Closed" />
+    <InformationField Name="StartTime" Value="2013-10-08T05:46:08.4478442Z" />
+    <InformationField Name="FinishTime" Value="2013-10-08T05:48:27.4475479Z" />
+    <InformationField Name="PossibleAgents" Value="vstfs:///Build/Agent/64=Hosted Build Agent" />
+  </Fields>
+<Children><BuildInformationNode Id="5457957c-866a-4e68-90ec-ddf75e372546" ParentId="43f24c28-027a-4e3d-84fb-d4fe457e45d1" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="MaxWaitTime" Value="04:00:00" />
+    <InformationField Name="MaxExecutionTime" Value="00:00:00" />
+    <InformationField Name="ReservationSpec" Value="Name=*, Tags=" />
+  </Fields>
+<Children /></BuildInformationNode><BuildInformationNode Id="6bac622b-fa2e-4630-b39c-8780bfe843c9" ParentId="43f24c28-027a-4e3d-84fb-d4fe457e45d1" Type="ActivityOutput">
+  <Fields>
+    <InformationField Name="Result" Value="Hosted Build Agent (vstfs:///Build/Agent/64)" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode><BuildInformationNode Id="69e2324f-d01c-4a45-a699-28ac19754a2b" ParentId="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="BuildMessage">
+  <Fields>
+    <InformationField Name="Importance" Value="Normal" />
+    <InformationField Name="Message" Value="Skipped execution of Check In Gated Changes because of BuildReason Manual" />
+    <InformationField Name="Timestamp" Value="2013-10-08T05:48:27.4595477Z" />
+  </Fields>
+<Children /></BuildInformationNode><BuildInformationNode Id="f9e58101-3a11-446f-b991-3891cdc55afa" ParentId="11ddbee1-ee16-4779-b0c7-514908fca7cf" Type="ActivityInput">
+  <Fields>
+    <InformationField Name="MSBuildMultiProc" Value="True" />
+    <InformationField Name="Verbosity" Value="Normal" />
+    <InformationField Name="CreateWorkItem" Value="True" />
+    <InformationField Name="SourceAndSymbolServerSettings" Value="Index Sources" />
+    <InformationField Name="RunCodeAnalysis" Value="AsConfigured" />
+    <InformationField Name="SolutionSpecificBuildOutputs" Value="False" />
+    <InformationField Name="TestSpecs" Value="Run tests in test sources matching **\*test*.dll, Target platform: 'X86'" />
+    <InformationField Name="AgentSettings" Value="Use agent where Name=* and Tags is empty; Max Wait Time: 04:00:00" />
+    <InformationField Name="MSBuildPlatform" Value="Auto" />
+    <InformationField Name="PrivateDropLocation" />
+    <InformationField Name="MSBuildArguments" />
+    <InformationField Name="CreateLabel" Value="True" />
+    <InformationField Name="AssociateChangesetsAndWorkItems" Value="True" />
+    <InformationField Name="GetVersion" />
+    <InformationField Name="CleanWorkspace" Value="All" />
+    <InformationField Name="PerformTestImpactAnalysis" Value="True" />
+    <InformationField Name="BuildSettings" Value="Build $/P-I-1/P-I-1/P-I-1.sln with default platform and configuration" />
+    <InformationField Name="BuildNumberFormat" Value="$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)" />
+    <InformationField Name="DisableTests" Value="False" />
+  </Fields>
+<Children /></BuildInformationNode></Children></BuildInformationNode>
+</BuildInformation>
