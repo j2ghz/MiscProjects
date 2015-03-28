@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.vbproj", "{BED62FD2-5FD7-4D4E-B011-246047E6FE02}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Basic Express 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApplication1", "WindowsApplication1.vbproj", "{0908989A-D0F4-435C-B782-F584DB86A6CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BED62FD2-5FD7-4D4E-B011-246047E6FE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BED62FD2-5FD7-4D4E-B011-246047E6FE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BED62FD2-5FD7-4D4E-B011-246047E6FE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BED62FD2-5FD7-4D4E-B011-246047E6FE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0908989A-D0F4-435C-B782-F584DB86A6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0908989A-D0F4-435C-B782-F584DB86A6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0908989A-D0F4-435C-B782-F584DB86A6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0908989A-D0F4-435C-B782-F584DB86A6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

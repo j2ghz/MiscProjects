@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Basic Express 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Hello World", "Hello World\Hello World.vbproj", "{6679ADFA-6F50-43DF-9F85-4E7E5D0A377A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6679ADFA-6F50-43DF-9F85-4E7E5D0A377A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6679ADFA-6F50-43DF-9F85-4E7E5D0A377A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6679ADFA-6F50-43DF-9F85-4E7E5D0A377A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6679ADFA-6F50-43DF-9F85-4E7E5D0A377A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
