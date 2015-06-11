@@ -12,20 +12,8 @@ namespace Kalkulačka
 {
     public partial class Form1 : Form
     {
-        long displej;
-        public long Displej
-        {
-            get
-            {
-                return displej;
-            }
-            set
-            {
-                displej = value;
-                label1.Text = value.ToString();
-            }
-        }
-        long mezisoucet;
+        double mezisoucet;
+        string posledniOperace;
         public Form1()
         {
             InitializeComponent();
@@ -41,38 +29,41 @@ namespace Kalkulačka
             string ButtonTag = "";
             int cislo;
             if (!(sender is Button))
-                throw new Exception("Volání metody kliknutí bez předání tlačítka");
+                throw new ArgumentException("Volání metody kliknutí na tlačítko bez předání tlačítka. !(sender is Button)");
             else
                 ButtonTag = ((Button)sender).Tag.ToString();
-            if (int.TryParse(ButtonTag, out cislo))
+            if (int.TryParse(ButtonTag, out cislo) && label1.Text.Split().Length < 12) //Stisknute tlacitko je cislo, pridat na display
             {
-                //pridat na displej
-                Displej *= 10;
-                Displej += cislo;
+                if (label1.Text == "0") label1.Text = "";
+                label1.Text += ButtonTag;
             }
-            else
+            else // tlacitko je operace, TODO
             {
-                switch (ButtonTag) // TODO: operace, to co tu je tak je spatne
+                switch (ButtonTag)
                 {
-                    case "+":
-                        listBox1.Items.Add(Displej.ToString() + " +");
-                        mezisoucet += displej;
-                        displej = 0;
-                        break;
-                    case "-":
-                        break;
-                    case "*":
-                        break;
-                    case "/":
-                        break;
                     case "=":
-                        listBox1.Items.Add(Displej.ToString() + " =");
-                        mezisoucet = 0;
-                        displej = 0;
+                        provest();
                         break;
                     default:
+                        //Displej = 0;
+                        if (!(posledniOperace == null))
+                        {
+                            provest();
+                            posledniOperace = null;
+                        }
+                        posledniOperace = ButtonTag;
                         break;
                 }
+            }
+        }
+        private void provest()
+        {
+            switch (posledniOperace)
+            {
+                case "+":
+                    break;
+                default:
+                    break;
             }
         }
     }

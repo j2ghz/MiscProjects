@@ -274,6 +274,7 @@
             // button15
             // 
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button15.Enabled = false;
             this.button15.Location = new System.Drawing.Point(173, 3);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(79, 48);
@@ -285,22 +286,26 @@
             // button16
             // 
             this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button16.Enabled = false;
             this.button16.Location = new System.Drawing.Point(88, 3);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(79, 48);
             this.button16.TabIndex = 12;
-            this.button16.Text = "button16";
+            this.button16.Tag = "CE";
+            this.button16.Text = "CE";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button_Click);
             // 
             // button17
             // 
             this.button17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button17.Enabled = false;
             this.button17.Location = new System.Drawing.Point(3, 3);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(79, 48);
             this.button17.TabIndex = 13;
-            this.button17.Text = "button17";
+            this.button17.Tag = "C";
+            this.button17.Text = "C";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button_Click);
             // 
@@ -327,7 +332,7 @@
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(340, 53);
             this.label1.TabIndex = 1;
-            this.label1.Text = "123456789012";
+            this.label1.Text = "0";
             // 
             // listBox1
             // 
