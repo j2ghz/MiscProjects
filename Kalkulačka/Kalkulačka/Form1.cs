@@ -78,6 +78,8 @@ namespace Kalkulačka
         {
             if (Vyprazdnit)
                 label1.Text = "0";
+            if (sender != null)
+                listBox1.Items.Add(label1.Text + " +");
             switch (posledniOperace)
             {
                 case "-":
@@ -98,16 +100,16 @@ namespace Kalkulačka
                     break;
             }
             if (sender != null)
-                listBox1.Items.Add(label1.Text + " =");
+                listBox1.Items.Add("= " + label1.Text);
             posledniOperace = "";
             Vyprazdnit = true;
         }
 
         private void buttonAkce_Click(object sender, EventArgs e)
         {
-            button20_Click(null, null);
             listBox1.Items.Add(label1.Text + " " + ((Button)sender).Tag.ToString());
-            posledniOperace = ((Button)sender).Tag.ToString(); //mozna dat vse do jedne
+            button20_Click(null, null);
+            posledniOperace = ((Button)sender).Tag.ToString();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -130,6 +132,7 @@ namespace Kalkulačka
         {
             label1.Text = "0";
             posledniOperace = "";
+            mezisoucet = 0;
         }
     }
 }
