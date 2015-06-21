@@ -13,8 +13,8 @@ namespace Kalkulačka
     public partial class Form1 : Form
     {
         double mezisoucet = 0;
-        string posledniOperace;
-        bool Vyprazdnit = true;
+        string Operace;
+        bool ZobrazenVysledek = true;
         public Form1()
         {
             InitializeComponent();
@@ -25,62 +25,42 @@ namespace Kalkulačka
 
         }
 
-        //private void button_Click(object sender, EventArgs e)
-        //{
-        //    string ButtonTag = "";
-        //    int cislo;
-        //    if (!(sender is Button))
-        //        throw new ArgumentException("Volání metody kliknutí na tlačítko bez předání tlačítka. !(sender is Button)");
-        //    else
-        //        ButtonTag = ((Button)sender).Tag.ToString();
-        //    if (int.TryParse(ButtonTag, out cislo) && label1.Text.Split().Length < 12) //Stisknute tlacitko je cislo, pridat na display
-        //    {
-        //        if (label1.Text == "0") label1.Text = "";
-        //        label1.Text += ButtonTag;
-        //    }
-        //    else // tlacitko je operace, TODO
-        //    {
-        //        switch (ButtonTag)
-        //        {
-        //            case "=":
-        //                provest();
-        //                break;
-        //            default:
-        //                //Displej = 0;
-        //                if (!(posledniOperace == null))
-        //                {
-        //                    provest();
-        //                    posledniOperace = null;
-        //                }
-        //                posledniOperace = ButtonTag;
-        //                break;
-        //        }
-        //    }
-        //}
         private void buttonCislo_Click(object sender, EventArgs e)
         {
-            if (Vyprazdnit)
-                label1.Text = "";
             string ButtonTag = "";
-            if (!(sender is Button))
-                throw new ArgumentException("Volání metody kliknutí na tlačítko bez předání tlačítka. !(sender is Button)");
-            else
-                ButtonTag = ((Button)sender).Tag.ToString();
+            ButtonTag = ((Button)sender).Tag.ToString();
             if (label1.Text.Split().Length < 12)
             {
-                if (label1.Text == "0") label1.Text = "";
+                if (label1.Text == "0" || ZobrazenVysledek) label1.Text = "";
+                if (label1.Text.Contains(",") && ButtonTag == ",") return;
                 label1.Text += ButtonTag;
             }
-            Vyprazdnit = false;
+            ZobrazenVysledek = false;
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-            if (Vyprazdnit)
-                label1.Text = "0";
-            if (sender != null)
-                listBox1.Items.Add(label1.Text + " +");
-            switch (posledniOperace)
+            provest();
+        }
+
+        private void buttonAkce_Click(object sender, EventArgs e)
+        {
+            if (ZobrazenVysledek == false && Operace != null)
+                provest();
+            mezisoucet = double.Parse(label1.Text);
+            Operace = ((Button)sender).Tag.ToString();
+            ZobrazenVysledek = true;
+        }
+
+        private void provest()
+        {
+            string tisk = "";
+            if (mezisoucet != 0)
+            {
+                tisk += mezisoucet.ToString() + " " + Operace + " " + label1.Text;
+            }
+
+            switch (Operace)
             {
                 case "-":
                     mezisoucet -= double.Parse(label1.Text);
@@ -94,25 +74,29 @@ namespace Kalkulačka
                     mezisoucet /= double.Parse(label1.Text);
                     label1.Text = mezisoucet.ToString();
                     break;
-                default:
+                case "+":
                     mezisoucet += double.Parse(label1.Text);
                     label1.Text = mezisoucet.ToString();
                     break;
             }
-            if (sender != null)
-                listBox1.Items.Add("= " + label1.Text);
-            posledniOperace = "";
-            Vyprazdnit = true;
-        }
-
-        private void buttonAkce_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Add(label1.Text + " " + ((Button)sender).Tag.ToString());
-            button20_Click(null, null);
-            posledniOperace = ((Button)sender).Tag.ToString();
+            if (mezisoucet != 0)
+            {
+                tisk += " = " + label1.Text;
+                listBox1.Items.Add(tisk);
+            }
+            ZobrazenVysledek = true;
+            mezisoucet = 0;
+            Operace = "";
         }
 
         private void button17_Click(object sender, EventArgs e)
+        {
+            label1.Text = "0";
+            Operace = "";
+            mezisoucet = 0;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
         {
             switch (label1.Text.Length)
             {
@@ -125,14 +109,15 @@ namespace Kalkulačka
                     label1.Text = label1.Text.Remove(label1.Text.Length - 1);
                     break;
             }
-                
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            label1.Text = "0";
-            posledniOperace = "";
-            mezisoucet = 0;
+            if (double.Parse(label1.Text) > 0)
+                label1.Text = "-" + label1.Text;
+            else
+                label1.Text = label1.Text.TrimStart('-');
+
         }
     }
 }
